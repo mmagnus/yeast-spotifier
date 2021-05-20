@@ -184,4 +184,4 @@ or
 
 and install requirements:
 
-    pip install pillow
+    pip install pillow psd-tools3 # psd-tools3 only if you want to work on PSD (Photoshop) files
