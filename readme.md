@@ -176,11 +176,7 @@ Process a figure into numbers:
     
 # Install
 
-    pip install rna-tools
-    
-or 
-
-    pip install -e git+http://github.com/mmagnus/rna-tools.git#egg=rna-tools
+    pip install -e git+http://github.com/mmagnus/yeast-spotifier.git#egg=yeast-spotifier
 
 and install requirements:
 
