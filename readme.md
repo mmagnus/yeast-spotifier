@@ -177,7 +177,3 @@ Process a figure into numbers:
 # Install
 
     pip install -e git+http://github.com/mmagnus/yeast-spotifier.git#egg=yeast-spotifier
-
-and install requirements:
-
-    pip install pillow psd-tools3 # psd-tools3 only if you want to work on PSD (Photoshop) files
