@@ -38,7 +38,7 @@ Fig. `-t`,  trim background to get nicely formatted dots.
 Open the image:
 ![](imgs/f1.jpeg)
 
-Image -> Adjustments -> Black & white
+Image -> Adjustments -> Black & white OR cmd+alt+shift+b
 
 Inverse color (cmd+i) 
 
