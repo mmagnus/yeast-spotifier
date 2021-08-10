@@ -6,6 +6,8 @@ Nothing fancy at the moment, no deep learning segmentation ;-) the script works 
 
 ![](imgs/yWwr8DqnXT.gif)
 
+! Download a set of templates for copper plates https://github.com/mmagnus/yeast-spotifier/releases/download/v1.0/templates-for-copper-plates.zip !
+
 ## Options
 
     $ spotifier.py -h
