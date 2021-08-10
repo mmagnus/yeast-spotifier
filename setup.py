@@ -6,7 +6,7 @@ with open('README.md') as f:
     long_description = f.read()
     
 setup(
-    name='spotifier',
+    name='yeast-spotifier',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     packages=find_packages(),
@@ -23,5 +23,7 @@ setup(
     long_description_content_type="text/markdown",
     include_package_data=True,
     install_requires=[
+        'pillow',
+        'psd-tools3',
        ],
 )
