@@ -31,9 +31,8 @@ def get_parser():
                         action="store_true", help="be verbose")
     parser.add_argument("-d", "--debug",
                         action="store_true", help="be even more verbose")
-
-    parser.add_argument("--dont-align",
-                        action="store_true", help="don't align dots")
+    parser.add_argument("--align",
+                        action="store_true", help="align dots")
     parser.add_argument("-x", default=165, type=int)
     parser.add_argument("-y", default=120, type=int)
     parser.add_argument("--trim-rms", default=50, type=int)
@@ -84,7 +83,7 @@ if __name__ == '__main__':
             ])
         logging.info('file: %s ' % (str(args)))
 
-        args.trim = not args.dont_align
+        args.trim = args.align
         if file.endswith('.psd'):
              try:
                  from psd_tools import PSDImage
