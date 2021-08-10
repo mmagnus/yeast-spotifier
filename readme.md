@@ -8,6 +8,22 @@ Nothing fancy at the moment, no deep learning segmentation ;-) the script works 
 
 ! Download a set of templates for copper plates https://github.com/mmagnus/yeast-spotifier/releases/download/v1.0/templates-for-copper-plates.zip !
 
+Table of Contents
+=================
+
+* [Spotifier](#spotifier)
+  * [Options](#options)
+  * [Prepare image](#prepare-image)
+  * [Adjust the image to the template](#adjust-the-image-to-the-template)
+  * [Prepare mapping file](#prepare-mapping-file)
+* [Customization](#customization)
+* [Mappings](#mappings)
+* [For reporters](#for-reporters)
+* [Digitifier](#digitifier)
+* [Install](#install)
+
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go)
+
 ## Options
 
     $ spotifier.py -h
