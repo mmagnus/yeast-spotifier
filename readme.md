@@ -1,6 +1,9 @@
 # Spotifier
 
 This script to covert pre-processed plates image into figures.
+
+Nothing fancy at the moment, no deep learning segmentation ;-) the script works using plates spotted according to provided template. Still, this helps to get this task done quicker!
+
 ![](imgs/yWwr8DqnXT.gif)
 
 ## Options
@@ -35,7 +38,7 @@ Fig. `-t`,  trim background to get nicely formatted dots.
 Open the image:
 ![](imgs/f1.jpeg)
 
-Image -> Adjustments -> Black & white
+Image -> Adjustments -> Black & white OR cmd+alt+shift+b
 
 Inverse color (cmd+i) 
 
@@ -177,7 +180,3 @@ Process a figure into numbers:
 # Install
 
     pip install -e git+http://github.com/mmagnus/yeast-spotifier.git#egg=yeast-spotifier
-
-and install requirements:
-
-    pip install pillow psd-tools3 # psd-tools3 only if you want to work on PSD (Photoshop) files
