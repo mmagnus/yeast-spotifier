@@ -26,27 +26,26 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go)
 
 ## Options
 
-    $ spotifier.py -h
-    usage: spotifier.py [-h] [-v] [-d] [--dont-align] [-x X] [-y Y]
-                        [--trim-rms TRIM_RMS] [--size SIZE] [-a]
-                        map file [file ...]
+	usage: spotifier.py [-h] [-v] [-d] [--align] [-x X] [-y Y]
+			    [--trim-rms TRIM_RMS] [--size SIZE] [-a]
+			    map file [file ...]
 
-    install to work on psd files: psd-tools3
+	install to work on psd files: psd-tools3
 
-    positional arguments:
-      map                  map
-      file                 pre-processed image(s)
+	positional arguments:
+	  map                  map
+	  file                 pre-processed image(s)
 
-    optional arguments:
-      -h, --help           show this help message and exit
-      -v, --verbose        be verbose
-      -d, --debug          be even more verbose
-      --dont-align         don't align dots
-      -x X
-      -y Y
-      --trim-rms TRIM_RMS
-      --size SIZE
-      -a, --dont-annotate
+	optional arguments:
+	  -h, --help           show this help message and exit
+	  -v, --verbose        be verbose
+	  -d, --debug          be even more verbose
+	  --align              align dots
+	  -x X
+	  -y Y
+	  --trim-rms TRIM_RMS
+	  --size SIZE
+	  -a, --dont-annotate
 
 ![](imgs/jyvsjrgxpe.gif)
 
