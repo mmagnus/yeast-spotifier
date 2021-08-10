@@ -233,7 +233,13 @@ if __name__ == '__main__':
             for s in row:  # spot in row
                 # for center something like this https://stackoverflow.com/questions/1970807/center-middle-align-text-with-pil
                 # this is for spot or gray box
-                if s == 0: # put a gray box here
+                if s == -1: # put a gray box here
+                    img_box = Image.new('RGB', (100, 100))
+                    draw_box = ImageDraw.Draw(img_box)
+                    draw_box.rectangle((0,0,100,100), fill ="white") # , outline ="red")
+                    fig.paste(img_box, (x, y)) # s - 1 # index from 0
+                    row_fig.paste(img_box, (x, row_fig_y))
+                elif s == 0: # put a gray box here
                     img_box = Image.new('RGB', (100, 100))
                     draw_box = ImageDraw.Draw(img_box)
                     draw_box.rectangle((0,0,100,100), fill ="#808080") # , outline ="red")

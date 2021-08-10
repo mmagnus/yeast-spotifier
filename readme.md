@@ -21,6 +21,7 @@ Table of Contents
 * [For reporters](#for-reporters)
 * [Digitifier](#digitifier)
 * [Install](#install)
+* [Changelog](#changelog)
 
 Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go)
 
@@ -197,3 +198,16 @@ Process a figure into numbers:
 # Install
 
     pip install -e git+http://github.com/mmagnus/yeast-spotifier.git#egg=yeast-spotifier
+
+# Changelog
+
+1.1.
+
+- --dont-align -> --align (align is worse right now hmm... so the default is --dont-align)
+- use -1 in mapping to put a white box, you can use to make spacers for your figures
+
+Mapping: 1,-1,2
+
+![](imgs/spacer.jpg)
+
+1.1 initial code
