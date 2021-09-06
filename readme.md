@@ -1,6 +1,6 @@
 # Spotifier
 
-This script to covert pre-processed plates image into figures.
+This script to covert pre-processed plate images into figures.
 
 Nothing fancy at the moment, no deep learning segmentation ;-) the script works using plates spotted according to provided template. Still, this helps to get this task done quicker!
 
