@@ -217,9 +217,10 @@ if __name__ == '__main__':
         try:
             fnt = 'Helvetica.ttc'
             font = ImageFont.truetype(fnt, size=40)
+            font_bar = ImageFont.truetype(fnt, size=100)
         except OSError:
             font = ImageFont.load_default() # should work for everything else
-        font_bar = ImageFont.truetype(fnt, size=100)
+            font_bar = ImageFont.load_default()
         #####################################################
 
         picked_wt = False
