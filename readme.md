@@ -216,9 +216,14 @@ Process a figure into numbers:
 ![](imgs/1_all_plot.png)
     
 # Install
+To download the tool and install it run (with this you will get all test files):
 
     pip install -e git+http://github.com/mmagnus/yeast-spotifier.git#egg=yeast-spotifier
 
+if you want to have only the code installed in your system, simply run:
+
+    pip install yeast-spotifier
+	
 # Changelog
 
 1.1.
