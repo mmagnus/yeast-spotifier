@@ -1,5 +1,7 @@
 # Spotifier
 
+ <a href="https://pypi.org/project/yeast-spotifier"><img src="https://badge.fury.io/py/yeast-spotifier.svg" alt="PyPI version"></a>
+ 
 This script to covert pre-processed plate images into figures.
 
 Nothing fancy at the moment, no deep learning segmentation ;-) the script works using plates spotted according to provided template. Still, this helps to get this task done quicker!
