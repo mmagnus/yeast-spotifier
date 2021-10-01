@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-
+! EXPERIMENTAL ! still in testing
 """
 from __future__ import print_function
 
@@ -22,7 +22,7 @@ def get_parser():
                         action="store_true", help="be verbose")
     parser.add_argument("--debug",
                         action="store_true")
-    parser.add_argument("-a", "--levela", default = 50)
+    parser.add_argument("-a", "--levela", default = 30)
     parser.add_argument("-b", "--levelb", default = 60)
     parser.add_argument("-mx", default = 0, type=int)
     parser.add_argument("-my", default = 0, type=int)
@@ -33,6 +33,7 @@ def trim(im):
     """
     https://stackoverflow.com/questions/10615901/trim-whitespace-using-pil
     """
+    print('triming...')
     bg = Image.new(im.mode, im.size, im.getpixel((2,2)))
     diff = ImageChops.difference(im, bg)
     diff = ImageChops.add(diff, diff, 0.0, 0)
@@ -79,34 +80,43 @@ if __name__ == '__main__':
     for f in args.files:
         print(f)
 
-        rms = get_rms(Image.open(f))
+        for la in range(1, 100, 10):
+            for lb in range(1, 100, 10):
 
-        img = ImageOps.invert(Image.open(f))
+                rms = get_rms(Image.open(f))
 
-        mask = Image.open(str(pathlib.Path(__file__).parent.absolute()) +  '/mask.png')
-        #inverted_image.save('inv.png')
+                img = ImageOps.invert(Image.open(f))
 
-        img = img.convert('LA')
-        if args.debug: img.save('_greyscale.png')
+                # mask = Image.open(str(pathlib.Path(__file__).parent.absolute()) +  '/mask.png')
+                #inverted_image.save('inv.png')
 
-        img = img.transpose(Image.FLIP_LEFT_RIGHT)
-        img = img.resize([1000, 1000])
-        # img = normalized(img)
-        img.paste(mask, (args.mx, args.my), mask)
+                img = img.convert('LA')
+                if args.debug: img.save('_greyscale.png')
 
-        img1 = level_image(img, args.levela, args.levelb)
-        img1.save(os.path.splitext(f)[0] + '_prep.png')
+                img = img.transpose(Image.FLIP_LEFT_RIGHT)
+                img = img.resize([1000, 1000])
+                #img = normalized(img)
+                # img.paste(mask, (args.mx, args.my), mask)
 
-        ## if rms < 1: # 180
-        ##     img1 = level_image(img, args.levela, args.levelb)
-        ##     img1.save(os.path.splitext(f)[0] + '_prep.png')
-        ## else:
-        ##     img2 = level_image(img, 40, 50)
-        ##     img2.save(os.path.splitext(f)[0] + '_prep.png')    
-        #if args.debug: img.save('_before_trim.png')
-        # img = trim(img)
-        #img = img.resize([1000, 1000])
-        #if args.debug: img.save('_after_trim.png')
-        # if args.debug:
-        #    img.save('_before_mask.png')
-        # img.show()
+                img1 = level_image(img, la, lb)# args.levela, args.levelb)
+                img1 = img1.transpose(Image.FLIP_LEFT_RIGHT)
+
+                img1 = trim(img1)
+
+                outfn = os.path.splitext(f)[0] + '_' + str(la) + '-' + str(lb) + '_prep.png'
+                img1.save(outfn)
+                print(outfn)
+                
+                ## if rms < 1: # 180
+                ##     img1 = level_image(img, args.levela, args.levelb)
+                ##     img1.save(os.path.splitext(f)[0] + '_prep.png')
+                ## else:
+                ##     img2 = level_image(img, 40, 50)
+                ##     img2.save(os.path.splitext(f)[0] + '_prep.png')    
+                #if args.debug: img.save('_before_trim.png')
+                # img = trim(img)
+                #img = img.resize([1000, 1000])
+                #if args.debug: img.save('_after_trim.png')
+                # if args.debug:
+                #    img.save('_before_mask.png')
+                # img.show()
