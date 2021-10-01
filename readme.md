@@ -1,5 +1,7 @@
 # Spotifier
 
+ <a href="https://pypi.org/project/yeast-spotifier"><img src="https://badge.fury.io/py/yeast-spotifier.svg" alt="PyPI version"></a>
+ 
 This script to covert pre-processed plate images into figures.
 
 Nothing fancy at the moment, no deep learning segmentation ;-) the script works using plates spotted according to provided template. Still, this helps to get this task done quicker!
@@ -226,7 +228,11 @@ if you want to have only the code installed in your system, simply run:
 	
 # Changelog
 
-1.1.
+v1.2 Works on Windows ;-)
+
+Fixed #4 Font missing on Windows and now it works on Windows (install Git for Windows with the shell)
+
+v1.1 
 
 - --dont-align -> --align (align is worse right now hmm... so the default is --dont-align)
 - use -1 in mapping to put a white box, you can use to make spacers for your figures
@@ -235,4 +241,4 @@ Mapping: 1,-1,2
 
 ![](imgs/spacer.jpg)
 
-1.1 initial code
+1.0 initial code taken from https://github.com/mmagnus/rna-tools 
