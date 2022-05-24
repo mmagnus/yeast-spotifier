@@ -222,10 +222,15 @@ To download the tool and install it run (with this you will get all test files):
 
     pip install -e git+http://github.com/mmagnus/yeast-spotifier.git#egg=yeast-spotifier
 
+or download the repository and install from the folder:
+
+    pip install -e .
+
 if you want to have only the code installed in your system, simply run:
 
     pip install yeast-spotifier
 	
+
 # Changelog
 
 v1.2 Works on Windows ;-)
