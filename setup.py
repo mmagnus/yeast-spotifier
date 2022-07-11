@@ -25,6 +25,6 @@ setup(
     include_package_data=True,
     install_requires=[
         'pillow',
-        'psd-tools3',
+        'psd-tools3==1.8.2',
        ],
 )
