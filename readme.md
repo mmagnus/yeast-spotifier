@@ -94,7 +94,7 @@ Open a text editor and prepare a file used to map dots into figure.
 
 Run the program:
 
-    python spotifier.py testdata/02/s02_30.psd -t -m testdata/02/map.txt
+    python spotifier.py testdata/02/map.txt testdata/02/s02_30.psd
 
 The results should be like this:
 
@@ -115,7 +115,7 @@ If you want to move single dots, use Preview and just move them around, save it 
 
 and re-run:
 
-	python spotifier.py testdata/02/18_X.png -t -m testdata/02/map.txt
+	python spotifier.py testdata/02/map.txt testdata/02/18_X.png
 
 -------------------------------------------------------------------------------
 
@@ -230,6 +230,7 @@ if you want to have only the code installed in your system, simply run:
 
     pip install yeast-spotifier
 	
+(to install requirements, `pip install psd-tools3==1.8.2 --user`)
 
 # Changelog
 
